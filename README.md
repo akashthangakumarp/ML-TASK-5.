@@ -126,7 +126,7 @@ These metrics help determine how effectively the model identifies customers who 
 
 🚀 How to Run the Project
 1. Clone the repository
-git clone https://github.com/Rabinson-20/ML-Task-5.git
+git clone 
 2. Open the project
 cd ML-Task-5
 3. Install required libraries
