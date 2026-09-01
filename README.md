@@ -294,6 +294,6 @@ Future versions of this project could include:
 
 ## 👨‍💻 Author
 
-**Karthikeyan R.**
+**Akash.P**
 
 > Machine Learning Project — Online Education Student Performance & Risk Prediction
