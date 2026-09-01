@@ -1,127 +1,177 @@
-# 🎓 Online Education Student Performance & Risk Prediction
+# 🤖 ML Task 5 – Customer Churn Prediction
 
-## 📌 Project Overview
+This repository contains **Machine Learning Task 5**, focused on analyzing customer data and building a machine learning model for **customer churn prediction**.
 
-This project focuses on analyzing **online education student data** and using **Machine Learning** techniques to understand and predict student **academic performance, engagement, dropout risk, and final results**.
-
-The project explores different student-related factors such as education level, region, studied credits, online activity, average score, engagement level, performance level, and risk level.
-
-The goal is to use data analysis and machine learning to identify students who may require additional academic support and to understand the factors associated with student success or withdrawal.
+The project uses the **Churn Modelling dataset** and includes data analysis, preprocessing, feature selection, model implementation, and evaluation using Python and popular machine learning libraries.
 
 ---
 
-## 🎯 Objectives
+## 📌 Project Overview
 
-* Analyze student demographic and academic information.
-* Study student engagement in online learning.
-* Analyze the relationship between online activity and academic performance.
-* Identify students with different levels of academic risk.
-* Predict student outcomes using Machine Learning.
-* Analyze factors related to passing, failing, and withdrawal.
-* Provide useful insights that can support early intervention for at-risk students.
+Customer churn prediction is a machine learning problem where we try to identify customers who are likely to leave a company based on their demographic and account-related information.
+
+### Main Objectives
+
+* Understand and explore the customer dataset
+* Perform data preprocessing
+* Select relevant features
+* Train machine learning models
+* Evaluate model performance
+* Predict whether a customer is likely to churn
+
+---
+
+## 📂 Repository Structure
+
+```text
+ML-Task-5/
+│
+├── Churn_Modelling (MAM) - Churn_Modelling (3).csv
+│
+├── ML_Task_5(dc).ipynb
+│
+├── ML_Task_5(fs).ipynb
+│
+└── README.md
+```
+
+### 📄 Files
+
+| File                                              | Description                                                          |
+| ------------------------------------------------- | -------------------------------------------------------------------- |
+| `Churn_Modelling (MAM) - Churn_Modelling (3).csv` | Dataset used for the machine learning task                           |
+| `ML_Task_5(dc).ipynb`                             | Jupyter Notebook containing the main data analysis and modeling work |
+| `ML_Task_5(fs).ipynb`                             | Jupyter Notebook containing feature-selection-related work           |
+| `README.md`                                       | Project documentation                                                |
 
 ---
 
 ## 📊 Dataset
 
-The dataset contains **32,593 student records** and **14 features**.
+The project uses the **Churn Modelling dataset**, which contains customer information and a target variable indicating whether a customer has exited or churned.
 
-### Dataset Features
+### Important Features
 
-| Feature             | Description                                 |
-| ------------------- | ------------------------------------------- |
-| `id_student`        | Unique student identifier                   |
-| `gender`            | Gender of the student                       |
-| `region`            | Geographic region of the student            |
-| `highest_education` | Highest level of education                  |
-| `studied_credits`   | Number of credits studied                   |
-| `imd_band`          | Socio-economic/deprivation band             |
-| `total_clicks`      | Total online learning platform interactions |
-| `avg_score`         | Average academic score                      |
-| `engagement_level`  | Student engagement level                    |
-| `performance_level` | Student performance category                |
-| `risk_level`        | Academic/dropout risk category              |
-| `pass_flag`         | Indicates whether the student passed        |
-| `dropout_flag`      | Indicates whether the student dropped out   |
-| `final_result`      | Final student outcome                       |
+Some of the important columns include:
 
-### Final Result Categories
+| Feature           | Description                                        |
+| ----------------- | -------------------------------------------------- |
+| `CreditScore`     | Customer credit score                              |
+| `Geography`       | Customer's geographical location                   |
+| `Gender`          | Customer gender                                    |
+| `Age`             | Customer age                                       |
+| `Tenure`          | Number of years with the company                   |
+| `Balance`         | Customer account balance                           |
+| `NumOfProducts`   | Number of products used                            |
+| `HasCrCard`       | Indicates whether the customer has a credit card   |
+| `IsActiveMember`  | Indicates whether the customer is an active member |
+| `EstimatedSalary` | Estimated customer salary                          |
 
-The `final_result` column contains four outcomes:
-
-* 🟢 **Pass**
-* 🔴 **Fail**
-* 🟠 **Withdrawn**
-* 🟣 **Distinction**
-
----
-
-## 🔍 Exploratory Data Analysis
-
-The project performs **Exploratory Data Analysis (EDA)** to understand patterns and relationships within the dataset.
-
-### Analysis Includes
-
-* Dataset structure and information
-* Missing value analysis
-* Statistical analysis
-* Student outcome distribution
-* Gender distribution
-* Regional distribution
-* Education-level distribution
-* Studied credits analysis
-* Online engagement analysis
-* Average score distribution
-* Performance-level analysis
-* Risk-level analysis
-* Correlation analysis
-* Data visualization using charts and graphs
-
----
-
-## 🧹 Data Preprocessing
-
-Before applying Machine Learning algorithms, the dataset is prepared through several preprocessing steps:
-
-* Handling missing values
-* Encoding categorical variables
-* Selecting relevant features
-* Removing unnecessary identifiers
-* Preparing input and target variables
-* Splitting the dataset into training and testing sets
-* Feature transformation and scaling when required
-
----
-
-## 🤖 Machine Learning
-
-Machine Learning techniques are applied to identify patterns in student data and predict student outcomes.
-
-### 1. 📚 Student Performance Prediction
-
-Predict the academic performance of students based on available academic and engagement-related features.
-
-### 2. 🚨 Dropout Risk Prediction
-
-Identify students who may have a higher probability of dropping out.
-
-### 3. 🎓 Final Result Prediction
-
-Predict the student's final outcome:
+### 🎯 Target Variable
 
 ```text
-Pass | Fail | Withdrawn | Distinction
+Exited
 ```
 
-### 4. ⚠️ Student Risk Analysis
+`Exited` indicates whether the customer has left the company.
 
-Analyze student engagement and academic characteristics to categorize students according to their risk level.
+* `0` → Customer did not churn
+* `1` → Customer churned
+
+---
+
+## 🛠️ Technologies Used
+
+* 🐍 **Python**
+* 📓 **Jupyter Notebook**
+* 🧮 **NumPy**
+* 🐼 **Pandas**
+* 📊 **Matplotlib**
+* 📈 **Seaborn**
+* 🤖 **Scikit-learn**
+
+---
+
+## 🔄 Machine Learning Workflow
+
+The project follows a basic machine learning workflow:
+
+```text
+Dataset
+   ↓
+Data Loading
+   ↓
+Data Exploration
+   ↓
+Data Preprocessing
+   ↓
+Feature Selection
+   ↓
+Train-Test Split
+   ↓
+Model Training
+   ↓
+Model Evaluation
+   ↓
+Churn Prediction
+```
+
+---
+
+## 🔍 Data Preprocessing
+
+The dataset is prepared before training the machine learning model.
+
+### Preprocessing Steps
+
+1. Load the dataset using Pandas
+2. Check for missing values
+3. Understand data types
+4. Remove unnecessary columns
+5. Encode categorical variables
+6. Select useful features
+7. Split the dataset into training and testing sets
+
+---
+
+## 🎯 Feature Selection
+
+Feature selection is used to identify the most useful features for predicting customer churn.
+
+The project includes a separate notebook:
+
+```text
+ML_Task_5(fs).ipynb
+```
+
+This notebook focuses on feature-selection-related analysis and identifying relevant features for the prediction task.
+
+---
+
+## 🤖 Machine Learning Model
+
+The selected features are used to train a **classification model**.
+
+The model learns patterns from existing customer data and attempts to predict whether a new customer is likely to churn.
+
+### 🔮 Prediction Process
+
+```text
+Input Customer Data
+        ↓
+Machine Learning Model
+        ↓
+Churn Prediction
+        ↓
+0 → No Churn
+1 → Churn
+```
 
 ---
 
 ## 📈 Model Evaluation
 
-Machine Learning models can be evaluated using appropriate performance metrics such as:
+The classification model can be evaluated using common machine learning metrics such as:
 
 * **Accuracy**
 * **Precision**
@@ -129,52 +179,7 @@ Machine Learning models can be evaluated using appropriate performance metrics s
 * **F1-Score**
 * **Confusion Matrix**
 
-These metrics help determine how effectively the model predicts student outcomes.
-
----
-
-## 🛠️ Technologies Used
-
-* 🐍 **Python**
-* ☁️ **Google Colab**
-* 📓 **Jupyter Notebook**
-* 🐼 **Pandas**
-* 🔢 **NumPy**
-* 📊 **Matplotlib**
-* 📈 **Seaborn**
-* 🤖 **Scikit-learn**
-* 🧠 **Machine Learning**
-
----
-
-## 📚 Python Libraries
-
-```python
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder, StandardScaler
-from sklearn.metrics import (
-    accuracy_score,
-    classification_report,
-    confusion_matrix
-)
-```
-
----
-
-## 📁 Project Structure
-
-```text
-Online-Education-ML/
-│
-├── online_education_dataset.csv
-├── Online_Education_ML.ipynb
-└── README.md
-```
+These metrics help determine how effectively the model identifies customers who are likely to churn.
 
 ---
 
@@ -183,117 +188,75 @@ Online-Education-ML/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/Online-Education-ML.git
+git clone https://github.com/Rabinson-20/ML-Task-5.git
 ```
 
 ### 2. Navigate to the Project
 
 ```bash
-cd Online-Education-ML
+cd ML-Task-5
 ```
 
 ### 3. Install Required Libraries
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
+pip install numpy pandas matplotlib seaborn scikit-learn jupyter
 ```
 
-### 4. Run the Notebook
+### 4. Start Jupyter Notebook
 
-Open:
+```bash
+jupyter notebook
+```
+
+### 5. Open the Notebooks
+
+Run either of the following notebooks:
 
 ```text
-Online_Education_ML.ipynb
+ML_Task_5(dc).ipynb
 ```
 
-You can run the project using:
+or
 
-* ☁️ Google Colab
-* 📓 Jupyter Notebook
-* 💻 VS Code
-
----
-
-## ☁️ Google Colab
-
-The complete analysis and Machine Learning implementation is available in Google Colab.
-
-### 🔗 Colab Notebook
-
-[Open Google Colab Notebook](https://colab.research.google.com/drive/16OjUnk5fWE28r3eQyuXoeSM2UF5Rb1Bf)
-
-> **Note:** Make sure the notebook's sharing permission is set to **Anyone with the link – Viewer** if you want other people to access it.
+```text
+ML_Task_5(fs).ipynb
+```
 
 ---
 
-## 📌 Key Insights
+## 💡 Key Learning Outcomes
 
-The dataset provides useful information about student behavior and academic outcomes.
+Through this project, I learned how to:
 
-Important areas investigated in this project include:
-
-* 📊 Student engagement and online activity
-* 📝 Average academic scores
-* 🎓 Academic performance levels
-* ⚠️ Student risk levels
-* 🚨 Dropout behavior
-* 🏆 Final student outcomes
-* 📚 Relationship between educational background and performance
-
-These insights can help educational institutions identify students who may need additional academic support.
+* Work with real-world datasets
+* Perform exploratory data analysis
+* Preprocess machine learning data
+* Handle categorical features
+* Select important features
+* Build classification models
+* Evaluate machine learning models
+* Understand customer churn prediction
 
 ---
 
-## 💡 Real-World Applications
+## 📌 Project Summary
 
-This type of Machine Learning system can be used in:
-
-* 🎓 Online learning platforms
-* 🏫 Colleges and universities
-* 👨‍🎓 Student monitoring systems
-* 💻 E-learning applications
-* 👨‍🏫 Academic counseling systems
-* 🚨 Early dropout detection systems
-
-### Example
-
-If a student shows **low engagement, low academic performance, and high risk**, an educational institution could provide additional mentoring or academic support before the student withdraws.
-
----
-
-## 🔮 Future Improvements
-
-Future versions of this project could include:
-
-* ⚡ Real-time student performance prediction
-* 🚨 Early warning system for dropout detection
-* 📊 Interactive student analytics dashboard
-* 🔔 Automated alerts for high-risk students
-* 🧠 Deep Learning models
-* ⚙️ Hyperparameter optimization
-* 🚀 Model deployment using Flask or FastAPI
-* 🌐 Web application for student risk prediction
-
----
-
-## ⭐ Project Highlights
-
-| Category                 | Details                         |
-| ------------------------ | ------------------------------- |
-| **Domain**               | Online Education                |
-| **Dataset Size**         | 32,593 records                  |
-| **Features**             | 14                              |
-| **Programming Language** | Python                          |
-| **ML Type**              | Classification / Prediction     |
-| **Data Analysis**        | Pandas, NumPy                   |
-| **Visualization**        | Matplotlib, Seaborn             |
-| **ML Framework**         | Scikit-learn                    |
-| **Environment**          | Google Colab / Jupyter Notebook |
+| Category             | Details                   |
+| -------------------- | ------------------------- |
+| **Project**          | ML Task 5                 |
+| **Domain**           | Customer Churn Prediction |
+| **ML Problem**       | Binary Classification     |
+| **Language**         | Python                    |
+| **Data Processing**  | Pandas, NumPy             |
+| **Visualization**    | Matplotlib, Seaborn       |
+| **Machine Learning** | Scikit-learn              |
+| **Environment**      | Jupyter Notebook          |
 
 ---
 
 ## 👨‍💻 Author
 
-**Akash.P**
+**Akash.P.**
 
-> Machine Learning Project — Online Education Student Performance & Risk Prediction
+> Machine Learning Project — Customer Churn Prediction
